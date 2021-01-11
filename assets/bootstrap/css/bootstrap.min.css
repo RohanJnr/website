@@ -10966,6 +10966,13 @@ section.contact ul.list-social li a {
     border-radius: 100%
 }
 
+section.contact ul.list-social li.social-mail a {
+    background-color: #b64141
+}
+
+section.contact ul.list-social li.social-mail a:hover {
+    background-color: #ec3939
+}
 section.contact ul.list-social li.social-github a {
     background-color: #211F1F
 }
