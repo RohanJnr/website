@@ -158,8 +158,12 @@ body::-webkit-scrollbar-thumb {
     height: 100%;
   }
 
-  #vision .container .section-heading h2 , #vision .container .section-heading p{
+  #vision .container .section-heading h2{
     margin-bottom: 5rem;
+  }
+
+  #vision .container .section-heading p{
+    margin-bottom: 2rem;
   }
 
   #vision .container .section-heading a{
@@ -187,8 +191,6 @@ section#team .container .section-heading .team-row .team-member img{
 section#team .container .section-heading .team-row .team-title{
   font-size: 24px;
 }
-
-
   
 /* ------------Changes------------- */
 
