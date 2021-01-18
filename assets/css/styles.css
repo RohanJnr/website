@@ -118,6 +118,7 @@ body::-webkit-scrollbar-thumb {
   
   .team-img:hover .overlay {
     opacity: 1;
+    border-radius: 1rem;
   }
   
   .socials a {
@@ -151,7 +152,47 @@ body::-webkit-scrollbar-thumb {
     background-color: #355c7d;
   }
 
+  /* ------------Changes------------- */
+
+  #vision{
+    height: 100%;
+  }
+
+  #vision .container .section-heading h2{
+    margin-bottom: 5rem;
+  }
+
+  #vision .container .section-heading p{
+    margin-bottom: 2rem;
+  }
+
+  #vision .container .section-heading a{
+    margin-top: 2rem;
+  }
+
   
+section#team .container .section-heading .subheading{
+  margin: 5rem;
+  /* font-family: 'Montserrat', sans-serif; */
+  letter-spacing: 3px;
+  font-size: 30px;
+  color: rgb(148, 147, 147);
+}
+
+section#team .container .section-heading .team-row .team-member{
+  margin: 0px auto 2rem auto;
+  max-width: 300px;
+}
+
+section#team .container .section-heading .team-row .team-member img{
+  border-radius: 1rem;
+}
+
+section#team .container .section-heading .team-row .team-title{
+  font-size: 24px;
+}
+  
+/* ------------Changes------------- */
 
   @media screen and (max-width: 295px){
       #vision .section-heading h2{
