@@ -244,3 +244,74 @@ section#team .container .section-heading .team-row .team-title{
       }
       
   }
+  
+  #queries input[type="text"], #queries input[type="email"], #queries input[type="url"], #queries textarea { 
+    border-radius: 2%; 
+    font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; 
+  }
+
+  #queries {
+    padding:25px;
+    
+  }
+  
+  #queries h3 {
+    color: #F96;
+    display: block;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  
+  #queries h4 {
+    margin:5px 0 15px;
+    display:block;
+    font-size:13px;
+  }
+  
+  fieldset {
+    border: medium none !important;
+    border-radius: 100%;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+  }
+  
+  #queries input[type="text"], #queries input[type="email"], #queries input[type="tel"], #queries input[type="url"], #queries textarea {
+    width:100%;
+    border:1px solid #CCC;
+    background:#DCDCDC;
+    margin:0 0 5px;
+    padding:10px;
+  }
+  
+  #queries input[type="text"]:hover, #queries input[type="email"]:hover, #queries input[type="tel"]:hover, #queries input[type="url"]:hover, #queries textarea:hover {
+    -webkit-transition:border-color 0.3s ease-in-out;
+    -moz-transition:border-color 0.3s ease-in-out;
+    transition:border-color 0.3s ease-in-out;
+    border:1px solid #AAA;
+  }
+  
+  #queries textarea {
+    height:100px;
+    max-width:100%;
+    resize:none;
+  }
+  
+  #queries input:focus, #queries textarea:focus {
+    outline:0;
+    border:1px solid #999;
+  }
+  ::-webkit-input-placeholder {
+   color:#888;
+  }
+  :-moz-placeholder {
+   color:#888;
+  }
+  ::-moz-placeholder {
+   color:#888;
+  }
+  :-ms-input-placeholder {
+   color:#888;
+  }
+  
