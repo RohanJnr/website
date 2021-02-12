@@ -289,11 +289,11 @@ DIY ROBOTICS
     bottom: 0;
     left: 0;
     right: 0;
-    background: #700877;
+    background: #7368D5;
     content: '';
-    background: -moz-linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
-    background: -webkit-linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
-    background: linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
+    background: -moz-linear-gradient(90deg, #7368D5 0%, #ff2759 100%, #ff2759 100%);
+    background: -webkit-linear-gradient(90deg, #7368D5 0%, #ff2759 100%, #ff2759 100%);
+    background: linear-gradient(90deg, #7368D5 0%, #ff2759 100%, #ff2759 100%);
     opacity: 0.8;
     z-index: -1;
 }
@@ -301,7 +301,7 @@ DIY ROBOTICS
 .snip1527 .date {
     background-color: #fff;
     border-radius: 50%;
-    color: #700877;
+    color: #7368D5;
     font-size: 18px;
     font-weight: 700;
     min-height: 48px;
@@ -500,4 +500,82 @@ time {
         border-width: 8px 16px 8px 0;
         border-color: transparent #7386D5 transparent transparent;
     }
+}
+
+
+/* UPCOMING EVENTS */
+
+.cal {
+    background: rgba(228, 241, 254, .7);
+    padding: 1em;
+    display: inline-block;
+    width: 22em;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, .1), 0 2px 8px rgba(0, 0, 0, .1);
+    margin-top: 50px;
+    transform: 0.3s;
+}
+
+.cal .cal-event {
+    padding: 1em 0;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.cal .cal-event .cal-event-tile {
+    background: #7386D5;
+    color: white;
+    text-align: center;
+    width: 3em;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.2em;
+    margin-right: 1em;
+    flex-shrink: 0;
+    border-radius: 0.5em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+
+.cal .cal-event .cal-event-tile .cal-event-tile-date,
+.cal .cal-event .cal-event-tile .cal-event-tile-month {
+    width: 100%;
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+.cal .cal-event .cal-event-tile .cal-event-tile-date {
+    font-size: 1.5em;
+}
+
+.cal .cal-event .cal-event-tile .cal-event-tile-month {
+    font-size: 1.1em;
+}
+
+.cal .cal-event .cal-event-title {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+    color: #7386D5;
+}
+
+.cal .cal-event .cal-event-location,
+.cal .cal-event .cal-event-time {
+    font-weight: 500;
+    margin: 0.2em 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #777;
+}
+
+.cal .cal-event .cal-event-location i,
+.cal .cal-event .cal-event-time i {
+    width: 1.2em;
+    display: inline-block;
+    text-align: center;
+    margin-right: 0.5em;
 }
