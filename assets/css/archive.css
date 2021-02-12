@@ -2,6 +2,19 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(85, 85, 85, 1);
 }
 
 .wrapper p {
