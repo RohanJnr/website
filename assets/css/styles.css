@@ -12,7 +12,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: rgb(85, 85, 85, 1);
+    background-color: rgb(84, 84, 84);
 }
 
 .btn {
