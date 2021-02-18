@@ -50,7 +50,7 @@ body::-webkit-scrollbar-thumb {
     position: absolute;
     right: 0;
     left: 20px;
-    color: #87c1ea;
+    color: #98212e;
 }
 
 .faq .faq-list .icon-show,
@@ -75,7 +75,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .faq .faq-list a.collapsed:hover {
-    color: #2487ce;
+    color: #98212e;
 }
 
 .faq .faq-list a.collapsed .icon-show {
