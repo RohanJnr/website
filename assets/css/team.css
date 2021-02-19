@@ -248,3 +248,7 @@ h5.team-member-name {
 #gototop:hover {
     background-color: #555;
 }
+
+.container {
+    text-align: center;
+}
