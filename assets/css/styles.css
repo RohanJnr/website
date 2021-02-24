@@ -15,6 +15,21 @@ body::-webkit-scrollbar-thumb {
     background-color: rgb(84, 84, 84);
 }
 
+.navbar {
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+}
+
+.navbar.scrolled {
+    background: rgb(68, 68, 68);
+    /* IE */
+    background: rgba(0, 0, 0, 0.78);
+    /* NON-IE */
+}
+
 .btn {
     background-color: rgba(68, 72, 75, 0.5);
     border-color: rgba(68, 72, 75, 0.5);
