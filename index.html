@@ -10,9 +10,11 @@
 
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="./css/timer.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
@@ -60,6 +62,34 @@
             document.documentElement.scrollTop = 0;
         }
     </script>
+
+      <section id="wrapper">
+
+        <div  id="particles-js">
+            <div>
+                <h1 style="margin-bottom:2rem;">Event starts in</h1>
+                <div id="clockdiv" >
+                  <div>
+                    <span class="days"></span>
+                    <div class="smalltext">Days</div>
+                  </div>
+                  <div>
+                    <span class="hours"></span>
+                    <div class="smalltext">Hours</div>
+                  </div>
+                  <div>
+                    <span class="minutes"></span>
+                    <div class="smalltext">Minutes</div>
+                  </div>
+                  <div>
+                    <span class="seconds"></span>
+                    <div class="smalltext">Seconds</div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <header id="masthead" class="masthead" style="background: url(&quot;assets/img/homepage.jpg?h=dd24179c1bd8bc74105f0c4fcfa92b7d&quot;) center / cover no-repeat;height: 108%;">
         <div class="container h-100">
             <div class="row h-100">
@@ -340,6 +370,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="assets/js/new-age.js"></script>
+    <script src="./js/timer.js"></script>
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', './js/particles.json', function(){
+          console.log('particles.json loaded...');
+        });
+      </script>
 </body>
 
 </html>
