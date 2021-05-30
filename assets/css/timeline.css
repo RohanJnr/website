@@ -130,7 +130,7 @@
         position: relative;
         font-size: 16px;
         line-height: 26px;
-        color: #848484;
+        color: #222222;
         font-weight: 400;
         padding-left: 35px;
         margin-bottom: 12px;
@@ -235,6 +235,16 @@
         padding-bottom: 125px;
     }
     
+    .about-section .image-column .inner-column:before {
+        position: absolute;
+        left: -75px;
+        top: 65px;
+        height: 520px;
+        width: 520px;
+        background-image: url(https://i.ibb.co/fxJ1jtC/about-circle-1.png);
+        content: "";
+    }
+    
     .about-section .image-column .image-1 {
         position: relative;
     }
@@ -279,96 +289,4 @@
     .about-section .image-column .video-link .link:hover {
         background-color: #191e34;
         color: #fff;
-    }
-    
-    .submit-idea {
-        width: 100%;
-        padding: 88px;
-    }
-    
-    .submit-idea input[type="text"],
-    .submit-idea input[type="email"],
-    .submit-idea input[type="tel"],
-    .submit-idea textarea {
-        border-radius: 0;
-        box-shadow: none;
-        font-size: 14px;
-        border-radius: 4px;
-        width: 100%;
-        border: 1px solid #CCC;
-        background: #DCDCDC;
-        margin: 0 0 5px;
-        padding: 10px;
-    }
-    
-    .submit-idea input[type="text"]:focus,
-    .submit-idea input[type="email"]:focus,
-    .submit-idea input[type="tel"]:focus,
-    .submit-idea textarea:focus {
-        outline: 0;
-        border: 1px solid #999;
-    }
-    
-    .submit-idea input[type="radio"]:active {
-        height: 44px;
-    }
-    
-    .submit-idea textarea {
-        padding: 10px 12px;
-        height: 100px;
-        max-width: 100%;
-        resize: none;
-    }
-    
-    .submit-idea button[type="submit"] {
-        background: #7386D5;
-        border: 0;
-        padding: 10px 30px;
-        color: #fff;
-        transition: 0.4s;
-        border-radius: 4px;
-        float: right;
-    }
-    
-    .submit-idea button[type="submit"]:hover {
-        background: #555;
-    }
-    
-    .submit-idea input:hover,
-    .submit-idea textarea:hover {
-        -webkit-transition: border-color 0.3s ease-in-out;
-        -moz-transition: border-color 0.3s ease-in-out;
-        transition: border-color 0.3s ease-in-out;
-        border: 1px solid #AAA;
-    }
-    
-    .socials a {
-        display: inline-block;
-        width: 37px;
-        height: 37px;
-        background-color: transparent;
-    }
-    
-    .socials i {
-        line-height: 37px;
-        color: #616161;
-        font-size: 14px;
-        width: 37px;
-        height: 37px;
-        border-radius: 50%;
-        text-align: center;
-        -webkit-transition: all 0.2s linear;
-        -moz-transition: all 0.2s linear;
-        -o-transition: all 0.2s linear;
-        -ms-transition: all 0.2s linear;
-        transition: all 0.2s linear;
-    }
-    
-    .team-details .socials i {
-        color: #fff;
-    }
-    
-    .socials a:hover i {
-        color: #fff;
-        background-color: #355c7d;
     }
