@@ -38,7 +38,7 @@ function getTimeRemaining(endtime) {
   }
   
   // var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
-  var eventTime = new Date('May 30, 2021 4:15:00');
+  var eventTime = new Date('May 31, 2021 4:15:00');
 
   if(new Date() > eventTime){
     var clock = document.getElementById('clockdiv');
