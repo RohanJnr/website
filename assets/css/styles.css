@@ -400,6 +400,13 @@ section#team .container .section-heading .team-row .team-title {
     #vision .section-heading h2 {
         font-size: 30px;
     }
+    nav div.container img{
+        width: 100px;
+    }
+  .list-social li{
+      width: 100px;
+      height: 100px;
+  }
 }
 
 @media screen and (max-width: 295px) {
