@@ -77,8 +77,8 @@
   @media screen and (max-width: 782px) {
 	
 	#wrapper {
-		padding: 30px;
-		margin: 176px 1.5rem 0px 1.5rem;
+		/* padding: 30px; */
+		/* margin: 176px 0rem 0px 0rem; */
 	}
   } 
 
