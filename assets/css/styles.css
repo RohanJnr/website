@@ -387,6 +387,17 @@ section#team .container .section-heading .team-row .team-title {
     font-size: 24px;
 }
 
+ul.list-social{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ul.list-social li{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 /* ------------Changes------------- */
 
@@ -406,6 +417,7 @@ section#team .container .section-heading .team-row .team-title {
   .list-social li{
       width: 100px;
       height: 100px;
+     
   }
 }
 
