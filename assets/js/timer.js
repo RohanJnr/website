@@ -38,7 +38,7 @@ function initializeClock(id, endtime) {
 }
 
 // var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
-var eventTime = new Date('June 13, 2021 17:00:00');
+var eventTime = new Date('November 20, 2021 12:30:00');
 
 if (new Date() > eventTime) {
     var clock = document.getElementById('clockdiv');
