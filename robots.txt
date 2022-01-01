@@ -1,3 +1,0 @@
-User-agent: *
-Disallow: 
-Sitemap: https://ieee-ras-pesu.github.io/website/sitemap.xml

@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "IEEE RAS PESU Website"
+version = "0.1.0"
+description = ""
+authors = ["RohanJnr <rohanjnr44@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "3.9.*"
+fastapi = "^0.70.1"
+asyncpg = "^0.25.0"
+uvicorn = {extras = ["standard"], version = "^0.16.0"}
+tortoise-orm = {version = "^0.17.8", extras = ["asyncpg"]}
+aerich = "^0.6.1"
+loguru = "^0.5.3"
+python-decouple = "^3.5"
+
+[tool.poetry.dev-dependencies]
+
+[tool.aerich]
+tortoise_orm = "postgres.config.TORTOISE_ORM"
+location = "./migrations"
+src_folder = "./."
