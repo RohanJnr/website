@@ -15,7 +15,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - .:/backend:ro
+      - .:/backend
     init: true
     depends_on:
       - postgres
