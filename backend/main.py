@@ -1,7 +1,9 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, status
 
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 from tortoise import Tortoise
+from tortoise.validators import ValidationError
 
 from postgres.config import TORTOISE_ORM
 from postgres.models import MegaProjects, MegaProjectsPydantic, MegaProjectsPydanticIn
@@ -16,6 +18,14 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.exception_handler(ValidationError)
+async def orm_error_handler(request: Request, exception: ValidationError):
+    return JSONResponse(
+        status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+        content={"detail": str(exception)}
+    )
 
 
 @app.on_event("startup")
