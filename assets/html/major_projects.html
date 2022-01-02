@@ -9,9 +9,15 @@
 		<script src="https://cdn.tailwindcss.com"></script>
 		<link rel="icon" sizes="32x32" href="../../favicon.ico" />
 		<link rel="manifest" href="../../manifest.webmanifest" />
+
+		<style>
+			.hide{
+				display: none;
+			}
+		</style>
 	</head>
 	<body>
-		<header class="text-gray-600 body-font ">
+		<header id="top" class="text-gray-600 body-font ">
 			<div
 				class="
 					container
@@ -76,6 +82,14 @@
 				</div>
 				<div class="lg:w-1/2 md:w-2/3 mx-auto">
 					<div class="flex flex-wrap -m-2">
+						<div id="error_msg" class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 w-full hide" role="alert">
+							<p class="font-bold">OOPS something is worng!</p>
+							<p>Check whether the entered data is correct or not and try again</p>
+						</div>
+						<div id="success_msg" class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 w-full hide" role="alert">
+							<p class="font-bold">Your project details has been submitted successfully!</p>
+							<p>You will be redirected to Home Page in 7 secs</p>
+						</div>
 						<div class="p-2 w-1/2 mb-3">
 							<div class="relative">
 								<label
@@ -169,11 +183,11 @@
 								ease-in-out"
 								>
 									<option></option>
-									<option value="CSE">Computer Science</option>
-									<option value="ECE">Electronics and Communication</option>
-									<option value="EEE">Electronics and Electrical</option>
+									<option value="CS">Computer Science</option>
+									<option value="EC">Electronics and Communication</option>
+									<option value="EE">Electronics and Electrical</option>
 									<option value="ME">Mechanical</option>
-									<option value="CV">Civil</option>
+									<option value="CE">Civil</option>
 									<option value="BT">Bio-tech</option>
 								</select>
 							</div>
@@ -190,6 +204,39 @@
 									type="email"
 									id="email"
 									name="email"
+									class="
+										w-full
+										bg-gray-100 bg-opacity-95
+										rounded
+										border border-gray-300
+										focus:border-indigo-500
+										focus:bg-white
+										focus:ring-2
+										focus:ring-indigo-200
+										text-base
+										outline-none
+										text-gray-700
+										py-1
+										px-3
+										leading-8
+										transition-colors
+										duration-200
+										ease-in-out
+									"
+								/>
+							</div>
+						</div>
+						<div class="p-2 w-1/2 mb-3">
+							<div class="relative">
+								<label
+									for="phone"
+									class="leading-7 text-sm text-black ml-1 mb-0"
+									>Phone Number</label
+								>
+								<input
+									type="number"
+									id="phone"
+									name="phone"
 									class="
 										w-full
 										bg-gray-100 bg-opacity-95
@@ -342,6 +389,8 @@
 			const handleClick=(e)=>{
 				e.preventDefault()
 
+				let error_msg=document.getElementById("error_msg")
+				let success_msg=document.getElementById("success_msg")
 				let name=document.getElementById("name")
 				let srn=document.getElementById("srn")
 				let dept=document.getElementById("dept")
@@ -349,26 +398,48 @@
 				let title=document.getElementById("title")
 				let requirements=document.getElementById("requirements")
 				let description=document.getElementById("description")
+				let phone=document.getElementById("phone")
 				
 				let details={
 					"name":name.value,
-					"srn":srn.value,
-					"dept":dept.value,
 					"email":email.value,
-					"title":title.value,
-					"requirements":requirements.value,
-					"description":description.value
+					"srn":srn.value,
+					"phone":phone.value,
+					"department":dept.value,
+					"project_title":title.value,
+					"project_description":description.value,
+					"components":requirements.value
 				}
 				// console.log(details)
-				fetch("", {
+				fetch("http://157.245.78.79/mega-projects/", {
      				method: "POST",
 					body: JSON.stringify(details),
 					headers: {
 						"Content-type": "application/json; charset=UTF-8"
 					}
 				})
-				.then(response => response.json())
-				.then(json => console.log(json));
+				.then(response => {
+					response.json();
+					if(response.status===422 || response.status===400){
+						window.location.href = "#top";
+						success_msg.classList.add("hide");
+						error_msg.classList.remove("hide");
+					}
+					else{
+						window.location.href = "#top";
+						error_msg.classList.add("hide")
+						success_msg.classList.remove("hide");	
+						setTimeout(()=>{
+							window.location.href = "/";
+						},7000)
+					}
+				})
+				.catch(err=>{
+					console.log(err);
+					success_msg.classList.add("hide");
+					error_msg.classList.remove("hide");
+				})
+
 			}
 		</script>
 	</body>
