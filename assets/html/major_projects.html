@@ -61,9 +61,9 @@
 				</nav>
 				
 		</header>
-		<section class="text-gray-600 body-font relative bg-gray-200">
+		<section class="text-gray-600 body-font relative bg-white">
 			<div class="container  mx-auto">
-				<div class="flex flex-col text-center w-full mb-12">
+				<div class="flex flex-col text-center w-full mb-12 mt-20 ">
 					<h1
 						class="
 							sm:text-3xl
@@ -83,12 +83,13 @@
 				<div class="lg:w-1/2 md:w-2/3 mx-auto">
 					<div class="flex flex-wrap -m-2">
 						<div id="error_msg" class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 w-full hide" role="alert">
-							<p class="font-bold">OOPS something is worng!</p>
-							<p>Check whether the entered data is correct or not and try again</p>
+							<p class="font-bold">Oops! something is wrong!</p>
+							<p>Check whether the entered srn and phone number is correct or not and try again</p>
 						</div>
 						<div id="success_msg" class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 w-full hide" role="alert">
 							<p class="font-bold">Your project details has been submitted successfully!</p>
-							<p>You will be redirected to Home Page in 7 secs</p>
+							<p class="font-bold">If you get selected, you will recieve a mail from us</p>
+							<p>You will be redirected to Home Page in 10 secs</p>
 						</div>
 						<div class="p-2 w-1/2 mb-3">
 							<div class="relative">
@@ -103,7 +104,7 @@
 									name="name"
 									class="
 										w-full
-										bg-gray-100 bg-opacity-95
+										bg-gray-100 bg-opacity-100
 										rounded
 										border border-gray-300
 										focus:border-indigo-500
@@ -136,7 +137,7 @@
 									name="srn"
 									class="
 										w-full
-										bg-gray-100 bg-opacity-95
+										bg-gray-100 bg-opacity-100
 										rounded
 										border border-gray-300
 										focus:border-indigo-500
@@ -165,7 +166,7 @@
 								>
 								<select name="dept" id="dept" 
 								class="w-full
-								bg-gray-100 bg-opacity-95
+								bg-gray-100 bg-opacity-100
 								rounded
 								border border-gray-300
 								focus:border-indigo-500
@@ -206,7 +207,7 @@
 									name="email"
 									class="
 										w-full
-										bg-gray-100 bg-opacity-95
+										bg-gray-100 bg-opacity-100
 										rounded
 										border border-gray-300
 										focus:border-indigo-500
@@ -234,12 +235,12 @@
 									>Phone Number</label
 								>
 								<input
-									type="number"
+									type="text"
 									id="phone"
 									name="phone"
 									class="
 										w-full
-										bg-gray-100 bg-opacity-95
+										bg-gray-100 bg-opacity-100
 										rounded
 										border border-gray-300
 										focus:border-indigo-500
@@ -272,7 +273,7 @@
 									name="title"
 									class="
 										w-full
-										bg-gray-100 bg-opacity-95
+										bg-gray-100 bg-opacity-100
 										rounded
 										border border-gray-300
 										focus:border-indigo-500
@@ -304,7 +305,7 @@
 									name="requirements"
 									class="
 										w-full
-										bg-gray-100 bg-opacity-95
+										bg-gray-100 bg-opacity-100
 										rounded
 										border border-gray-300
 										focus:border-indigo-500
@@ -338,7 +339,7 @@
 									name="description"
 									class="
 										w-full
-										bg-gray-100 bg-opacity-95
+										bg-gray-100 bg-opacity-100
 										rounded
 										border border-gray-300
 										focus:border-indigo-500
@@ -431,7 +432,7 @@
 						success_msg.classList.remove("hide");	
 						setTimeout(()=>{
 							window.location.href = "/";
-						},7000)
+						},10000)
 					}
 				})
 				.catch(err=>{
