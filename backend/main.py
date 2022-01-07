@@ -1,7 +1,9 @@
 from fastapi import FastAPI, Request, status
 
+from aerich import Command
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+from loguru import logger
 from tortoise import Tortoise
 from tortoise.validators import ValidationError
 
@@ -34,6 +36,12 @@ async def startup() -> None:
     # Generate the schema
     await Tortoise.generate_schemas(safe=True)
 
+    # Migrate tables
+    command = Command(tortoise_config=TORTOISE_ORM, app="models")
+    logger.info("Aerich init")
+    await command.init()
+    logger.info("Aerich upgrade")
+    await command.upgrade()
 
 @app.on_event("shutdown")
 async def shutdown() -> None:
