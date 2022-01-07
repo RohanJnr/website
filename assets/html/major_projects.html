@@ -84,9 +84,14 @@
 				</div>
 				<div class="lg:w-1/2 md:w-2/3 mx-auto">
 					<div class="flex flex-wrap -m-2">
-						<div id="error_msg" class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 w-full hide" role="alert">
+						<div id="error_msg1" class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 w-full hide" role="alert">
 							<p class="font-bold">Oops! something is wrong!</p>
 							<p>Check whether the entered srn and phone number is correct or not and try again</p>
+						</div>
+						<div id="error_msg2" class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 w-full hide" role="alert">
+							<p class="font-bold">Server is down!</p>
+							<p>Sorry for the inconvenience, please try again after some time</p>
+							<p>You will be redirected to Home Page in 10 secs</p>
 						</div>
 						<div id="success_msg" class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 w-full hide" role="alert">
 							<p class="font-bold">Your project details has been submitted successfully!</p>
@@ -401,7 +406,8 @@
 			const handleClick=(e)=>{
 				e.preventDefault()
 
-				let error_msg=document.getElementById("error_msg")
+				let error_msg1=document.getElementById("error_msg1")
+				let error_msg2=document.getElementById("error_msg2")
 				let success_msg=document.getElementById("success_msg")
 				let name=document.getElementById("name")
 				let srn=document.getElementById("srn")
@@ -423,7 +429,9 @@
 					"components":requirements.value
 				}
 				// console.log(details)
-				fetch("http://157.245.78.79/mega-projects/", {
+				// const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+				const apiUrl = 'http://157.245.78.79/mega-projects/';
+				fetch(apiUrl, {
      				method: "POST",
 					body: JSON.stringify(details),
 					headers: {
@@ -435,11 +443,22 @@
 					if(response.status===422 || response.status===400){
 						window.location.href = "#top";
 						success_msg.classList.add("hide");
-						error_msg.classList.remove("hide");
+						error_msg2.classList.add("hide");
+						error_msg1.classList.remove("hide");
+					}
+					else if(response.status===404){
+						window.location.href = "#top";
+						success_msg.classList.add("hide");
+						error_msg1.classList.add("hide");
+						error_msg2.classList.remove("hide");
+						setTimeout(()=>{
+							window.location.href = "/";
+						},10000)
 					}
 					else{
 						window.location.href = "#top";
-						error_msg.classList.add("hide")
+						error_msg1.classList.add("hide")
+						error_msg2.classList.add("hide")
 						success_msg.classList.remove("hide");	
 						setTimeout(()=>{
 							window.location.href = "/";
@@ -448,8 +467,13 @@
 				})
 				.catch(err=>{
 					console.log(err);
+					window.location.href = "#top";
 					success_msg.classList.add("hide");
-					error_msg.classList.remove("hide");
+					error_msg1.classList.add("hide");
+					error_msg2.classList.remove("hide");
+					setTimeout(()=>{
+							window.location.href = "/";
+						},10000)
 				})
 
 			}
