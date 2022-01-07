@@ -91,12 +91,12 @@
 						<div id="error_msg2" class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 w-full hide" role="alert">
 							<p class="font-bold">Server is down!</p>
 							<p>Sorry for the inconvenience, please try again after some time</p>
-							<p>You will be redirected to Home Page in 10 secs</p>
+<!-- 							<p>You will be redirected to Home Page in 10 secs</p> -->
 						</div>
 						<div id="success_msg" class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 w-full hide" role="alert">
 							<p class="font-bold">Your project details has been submitted successfully!</p>
 							<p class="font-bold">If you get selected, you will recieve a mail from us</p>
-							<p>You will be redirected to Home Page in 10 secs</p>
+<!-- 							<p>You will be redirected to Home Page in 10 secs</p> -->
 						</div>
 						<div class="p-2 w-1/2 mb-3">
 							<div class="relative">
@@ -451,18 +451,18 @@
 						success_msg.classList.add("hide");
 						error_msg1.classList.add("hide");
 						error_msg2.classList.remove("hide");
-						setTimeout(()=>{
-							window.location.href = "/website/index.html";
-						},10000)
+// 						setTimeout(()=>{
+// 							window.location.href = "/website/index.html";
+// 						},10000)
 					}
 					else{
 						window.location.href = "#top";
 						error_msg1.classList.add("hide")
 						error_msg2.classList.add("hide")
 						success_msg.classList.remove("hide");	
-						setTimeout(()=>{
-							window.location.href = "/website/index.html";
-						},10000)
+// 						setTimeout(()=>{
+// 							window.location.href = "/website/index.html";
+// 						},10000)
 					}
 				})
 				.catch(err=>{
@@ -471,9 +471,9 @@
 					success_msg.classList.add("hide");
 					error_msg1.classList.add("hide");
 					error_msg2.classList.remove("hide");
-					setTimeout(()=>{
-							window.location.href = "/website/index.html";
-						},10000)
+// 					setTimeout(()=>{
+// 							window.location.href = "/website/index.html";
+// 						},10000)
 				})
 
 			}
