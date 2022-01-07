@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:14-alpine
+    environment:
+      POSTGRES_DB: ieeebackend
+      POSTGRES_PASSWORD: ieeebackend
+      POSTGRES_USER: ieeebackend
+    ports:
+      - "127.0.0.1:5432:5432"
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    restart: always
+    volumes:
+      - .:/backend
+    init: true
+    depends_on:
+      - postgres
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=postgres://ieeebackend:ieeebackend@postgres:5432/ieeebackend
+      - DEBUG=1
+
+networks:
+  traefik-public:
+    external: false
